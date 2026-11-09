@@ -1,0 +1,17 @@
+# The Giode support relay; see README.md.
+name = "giode-support"
+main = "worker.js"
+compatibility_date = "2025-06-01"
+
+# Create it with `npx wrangler kv namespace create SUPPORT` and put the
+# id it prints here.
+[[kv_namespaces]]
+binding = "SUPPORT"
+id = "4f1f7d2b2d724f3ea63fac866a430db5"
+
+[vars]
+# Each app's support.Options.App, and the repository its reports go to.
+APPS = "{\"sonora\": \"xmhrnx/sonora\", \"easysend\": \"xmhrnx/easysend\",\"silicondb\":\"xmhrnx/silicondb\",\"pocket-agent\":\"xmhrnx/pocket-agent\",\"remanance\":\"xmhrnx/remanance\",\"serverus\":\"xmhrnx/serverus\",\"goencode\":\"xmhrnx/goencode\",\"middlelan\":\"xmhrnx/middlelan\",\"doclens\":\"xmhrnx/doclens\"}"
+LABELS = "user report"
+PER_HOUR = "5"
+PER_DAY = "20"
